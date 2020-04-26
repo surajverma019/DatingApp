@@ -7,3 +7,9 @@
         max-width: 1400px;
     }
 }
+
+.profile-style {
+    max-height: 40px;
+    border: 1px solid white;
+    display: inline;
+}
