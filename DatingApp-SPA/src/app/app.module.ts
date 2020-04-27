@@ -19,7 +19,6 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
-import { ListComponent } from './list/list.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { RouterModule } from '@angular/router';
@@ -36,6 +35,8 @@ import { PreventUnSavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { TimeagoModule } from 'ngx-timeago';
+import { ListsResolver } from './_resolvers/lists.resolver';
+import { ListsComponent } from './lists/lists.component';
 
 
 export function tokenGetter() {
@@ -48,7 +49,7 @@ export function tokenGetter() {
       NavComponent,
       HomeComponent,
       RegisterComponent,
-      ListComponent,
+      ListsComponent,
       MessagesComponent,
       MemberListComponent,
       MemberCardComponent,
@@ -89,7 +90,8 @@ export function tokenGetter() {
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
-      PreventUnSavedChanges
+      PreventUnSavedChanges,
+      ListsResolver
    ],
    bootstrap: [
       AppComponent
